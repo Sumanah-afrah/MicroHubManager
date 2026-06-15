@@ -1,0 +1,75 @@
+.home{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: 50px calc(100% - 72px) 20px;
+}
+.home .home-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-color);
+}
+.home .home-header img{
+    width: 120px;
+    height: 45px;
+    margin-left: 5px;
+}
+.home .home-header .info{
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.home .home-header .info img{
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+.home .home-header .info img:hover{
+    opacity: 0.8;
+}
+.home .home-footer{
+    font-size: 8pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--border-color);
+}
+.home .home-workspace{
+    display: grid;
+    grid-template-columns: 200px calc(100% - 200px);
+}
+.home .home-workspace .home-menus{
+    background: var(--primary-blue);
+    color: white;
+    overflow: auto;
+}
+.home .home-workspace .home-menus ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.home .home-workspace .home-menus ul li{
+    height: 40px;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    border-left: 5px solid transparent;
+}
+.home .home-workspace .home-menus ul li.active,
+.home .home-workspace .home-menus ul li:hover{
+    border-left: 5px solid var(--background);
+    cursor: pointer;
+    background: var(--primary-color);
+}
+.home .home-workspace .home-menus ul li img{
+    height: 20px;
+    margin: 0 5px;
+}
+.home .home-workspace .home-content{
+    background: var(--background-secondary);
+    overflow: auto;
+}

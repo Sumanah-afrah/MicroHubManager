@@ -1,0 +1,106 @@
+.app{
+    width: 100%;
+    height: 100%;
+    background: var(--primary-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app .container{
+    width:400px;
+    min-height: 200px;
+    border-radius: 10px;
+    background: var(--background);
+    display: grid;
+    grid-template-rows: 60px auto 20px;
+    overflow: hidden;
+    animation: fadeSlideIn 0.4s ease;
+}
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.app .container .container-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.app .container .container-header label{
+    color: var(--primary-blue);
+    font-size: 16pt;
+    font-weight: bold;
+}
+.app .container .container-header img{
+    width: 150px;
+    height: 50px;
+}
+.app .container .container-content{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.app .container .container-content .input-group{
+    height: 33px;
+    border: 1px solid var(--border-gray);
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.app .container .container-content .input-group img{
+    height: 16px;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.app .container .container-content input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding-left: 25px;
+}
+.app .container .container-content input.error {
+    border: 1px solid red;
+    background: var(--error-background);
+}
+.app .container .container-content p{
+    text-align: right;
+    margin-top: -10px;
+}
+.app .container .container-content label span,
+.app .container .container-content p span{
+    color: var(--primary-blue);
+}
+.app .container .container-content label span:hover,
+.app .container .container-content p span:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+.app .container .container-content button{
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    background: var(--primary-green);
+    color: var(--background);
+    margin-bottom: 15px;
+}
+.app .container .container-content button:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+.app .container .container-footer{
+    width: 100%;
+    font-size: 8pt;
+    text-align: center;
+}
